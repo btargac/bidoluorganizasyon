@@ -8,12 +8,16 @@ const compass = require('node-compass');
 const mongoose = require('mongoose');
 const session = require('express-session');
 const config = require('config');
+const setCurrentRoute = require('./middlewares/setCurrentRoute');
 
 const mongo_user = config.get('mongo_user');
 const mongo_password = config.get('mongo_password');
 
 const index = require('./routes/index');
-const users = require('./routes/users');
+const services = require('./routes/services');
+const about = require('./routes/about');
+const gallery = require('./routes/gallery');
+const shop = require('./routes/shop');
 
 const app = express();
 
@@ -52,8 +56,13 @@ app.use(cookieParser());
 app.use(compass({ mode: 'expanded' }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+// setCurrentRoute middleware sets the url variable to help navigation menus decide which one to set as active menu
+app.use(setCurrentRoute);
 app.use('/', index);
-app.use('/users', users);
+app.use('/hizmetler', services);
+app.use('/hakkimizda', about);
+app.use('/galeri', gallery);
+app.use('/satin-alma', shop);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
