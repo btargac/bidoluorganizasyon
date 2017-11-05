@@ -5,7 +5,7 @@ const subPages = new Map([
     ['biz-kimiz', 'about-us'],
     ['fiyatlar', 'about-prices'],
     ['rezervasyon', 'about-reservation'],
-    [undefined, 'about']
+    [undefined, 'about-us']
 ]);
 
 /* GET about page. */
