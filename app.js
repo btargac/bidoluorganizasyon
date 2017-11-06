@@ -18,6 +18,7 @@ const services = require('./routes/services');
 const about = require('./routes/about');
 const gallery = require('./routes/gallery');
 const shop = require('./routes/shop');
+const privacy = require('./routes/privacy');
 
 const app = express();
 
@@ -63,6 +64,7 @@ app.use('/hizmetler', services);
 app.use('/hakkimizda', about);
 app.use('/galeri', gallery);
 app.use('/satin-alma', shop);
+app.use('/gizlilik', privacy);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

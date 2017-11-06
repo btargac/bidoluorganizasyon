@@ -1,14 +1,14 @@
 <script>
     jQuery( document ).ready(function() {
         var feed = new Instafeed({
-            get: 'tagged',
-            tagName: 'mona',
+            get: 'user',
+            userId: '6109005215',
             target: 'instafeed59d8c0a7a21f2',
             limit: '6',
             resolution: 'standard_resolution',
-            template: '<span><a href="{{link}}" style="background-image:url({{image}});"><img src="/wp-content/themes/celebration/gfx/aspect-square.png" /></a></span>',
-            clientId: '4d7bbe3253c8431aa17ebea70507fa8b',
-            accessToken: '3294319514.4d7bbe3.5ea041399aa5465d96c7086957cf03cf'
+            template: '<span><a href="{{link}}" target="_blank" style="background-image:url({{image}});"><img src="/wp-content/themes/celebration/gfx/aspect-square.png" /></a></span>',
+            clientId: 'cb55d7794cfc40299eebeb34d71850c8',
+            accessToken: '34046150.cb55d77.b0004027031e498b8297435055bda4d6'
         });
         feed.run();
     });
