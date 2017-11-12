@@ -43,6 +43,12 @@
 <script type='text/javascript' src='/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js?ver=3.1.0'></script>
 <script type='text/javascript' src='/wp-includes/js/wp-embed.min.js?ver=4.8.2'></script>
 <script type='text/javascript' src='/wp-content/plugins/celebration/bt_parallax.js?ver=4.8.2'></script>
+<% if (locals.gallery) { %>
+    <script type='text/javascript' src='/wp-content/plugins/celebration/imagesloaded.pkgd.min.js'></script>
+    <script type='text/javascript' src='/wp-content/plugins/celebration/packery.pkgd.min.js'></script>
+    <script type='text/javascript' src='/wp-content/plugins/celebration/bt_grid_tweak.js'></script>
+    <script type='text/javascript' src='/wp-content/plugins/celebration/bt_grid_gallery.js'></script>
+<% } %>
 <script type='text/javascript' src='/wp-content/plugins/celebration/instafeed.min.js?ver=4.8.2'></script>
 <script>
     window.viewportUnitsBuggyfill.init({
