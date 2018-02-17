@@ -26,9 +26,7 @@ const app = express();
 
 const mongoDB = `mongodb://${mongo_user}:${mongo_password}@ds040837.mlab.com:40837/bidoluorganizasyon`;
 
-mongoose.connect(mongoDB, {
-    useMongoClient: true
-});
+mongoose.connect(mongoDB);
 const db = mongoose.connection;
 
 db.on('error', (err) => {
