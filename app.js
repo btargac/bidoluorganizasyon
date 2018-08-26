@@ -12,6 +12,9 @@ const setCurrentRoute = require('./middlewares/setCurrentRoute');
 
 const mongo_user = config.get('mongo_user');
 const mongo_password = config.get('mongo_password');
+const mongo_host = config.get('mongo_host');
+const mongo_port = config.get('mongo_port');
+const mongo_db = config.get('mongo_db');
 
 const index = require('./routes/index');
 const services = require('./routes/services');
@@ -24,7 +27,7 @@ const app = express();
 
 // Set up mongoose connection
 
-const mongoDB = `mongodb://${mongo_user}:${mongo_password}@ds040837.mlab.com:40837/bidoluorganizasyon`;
+const mongoDB = `mongodb://${mongo_user}:${mongo_password}@${mongo_host}:${mongo_port}/${mongo_db}`;
 
 mongoose.connect(mongoDB);
 const db = mongoose.connection;

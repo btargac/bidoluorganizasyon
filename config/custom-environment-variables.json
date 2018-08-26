@@ -1,5 +1,8 @@
 {
   "sendgrid_api_key": "SENDGRID_API_KEY",
+  "mongo_host": "MONGO_HOST",
+  "mongo_port": "MONGO_PORT",
+  "mongo_db": "MONGO_DB",
   "mongo_user": "MONGO_USER",
   "mongo_password": "MONGO_PASSWORD"
 }
