@@ -6,7 +6,7 @@ const Schema = mongoose.Schema;
 
 const UserSchema = new Schema({
     first_name: {type: String, required: true, max: 50, trim: true},
-    sur_name: {type: String, required: true, max: 50, trim: true},
+    last_name: {type: String, required: true, max: 50, trim: true},
     password: {type: String, required: true},
     email: {type: String, required: true, unique: true, trim: true},
     status: {type: String, enum: ['Active', 'Passive'], default: 'Active', required: true}
