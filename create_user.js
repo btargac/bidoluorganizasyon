@@ -12,9 +12,7 @@ const mongo_db = config.get('mongo_db');
 
 const mongoDB = `mongodb://${mongo_user}:${mongo_password}@${mongo_host}:${mongo_port}/${mongo_db}`;
 
-mongoose.connect(mongoDB, {
-    useMongoClient: true
-});
+mongoose.connect(mongoDB);
 const db = mongoose.connection;
 
 db.on('error', (err) => {
