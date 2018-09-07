@@ -1,18 +1,23 @@
 {
   "name": "bidoluetkinlik",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "private": true,
+  "author": {
+    "name": "Burak Targaç",
+    "email": "btargac@gmail.com",
+    "twitter": "burkitargino"
+  },
   "scripts": {
     "start": "node ./bin/www",
     "dev-start": "nodemon ./bin/www"
   },
   "engines": {
-    "node": "9.5.x",
-    "npm": "5.6.x"
+    "node": "10.9.x",
+    "npm": "6.4.x"
   },
   "dependencies": {
     "@sendgrid/mail": "^6.3.1",
-    "bcrypt": "^1.0.3",
+    "bcrypt": "^3.0.0",
     "body-parser": "^1.18.3",
     "config": "^1.31.0",
     "cookie-parser": "~1.4.3",
@@ -20,7 +25,7 @@
     "ejs": "^2.5.9",
     "express": "^4.16.3",
     "express-session": "^1.15.5",
-    "mongoose": "^5.2.9",
+    "mongoose": "^5.2.13",
     "morgan": "^1.9.0",
     "node-compass": "^0.2.4",
     "serve-favicon": "~2.5.0"
