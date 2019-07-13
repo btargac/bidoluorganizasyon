@@ -1,7 +1,10 @@
 # frozen_string_literal: true
+
 source "https://rubygems.org"
+ruby "2.6.0"
+
+git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 # gem "rails"
 
-# Added at 2017-06-24 13:55:10 +0300 by burak.targac:
 gem "compass", "~> 1.0"
