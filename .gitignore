@@ -37,3 +37,6 @@ npm-debug.log
 
 # compile-time-css
 public/stylesheets/*.css
+
+#environmet variables
+.env

@@ -9,6 +9,14 @@ const mongoose = require('mongoose');
 const session = require('express-session');
 const config = require('config');
 const setCurrentRoute = require('./middlewares/setCurrentRoute');
+const serveStatic = require('serve-static');
+
+const setCustomCacheControl = (res, path) => {
+    if (path.includes('acme-challenge')) {
+        // content type is set for acme ssl controls
+        res.setHeader('Content-Type', 'text/html; charset=utf-8');
+    }
+}
 
 const mongo_user = config.get('mongo_user');
 const mongo_password = config.get('mongo_password');
@@ -56,7 +64,9 @@ app.use(session({
 }));
 app.use(cookieParser());
 app.use(compass({ mode: 'expanded' }));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(serveStatic(path.join(__dirname, 'public'), {
+    setHeaders: setCustomCacheControl
+}));
 
 // setCurrentRoute middleware sets the url variable to help navigation menus decide which one to set as active menu
 app.use(setCurrentRoute);
